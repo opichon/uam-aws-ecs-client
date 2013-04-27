@@ -1,8 +1,8 @@
 {
-    "name": "uam/amazon-ecs-client",
+    "name": "uam/aws-ecs-client",
     "description": "PHP client library for the AWS ECommerce Service (Amazon Product Advertising API)",
     "type": "library",
-    "keywords": ["amazon", "product advertising API", "ecs"],
+    "keywords": ["amazon web services", "product advertising API", "ecs"],
     "license": "MIT",
     "require": {
         "php": ">=5.3.2",
