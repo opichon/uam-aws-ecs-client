@@ -6,12 +6,12 @@
     "license": "MIT",
     "require": {
         "php": ">=5.3.2",
-        "guzzle/guzzle": "3.3.x"
+        "aws/aws-sdk-php": "2.2.*"
     },
     "autoload": {
         "psr-0": {
-            "UAM\\Amazon\\PA": "src/",
-            "UAM\\Amazon\\PA\\Tests": "tests/"
+            "UAM\\Aws\\Ecs": "src/",
+            "UAM\\Aws\\Ecs\\Tests": "tests/"
         }
     },
     "extra": {

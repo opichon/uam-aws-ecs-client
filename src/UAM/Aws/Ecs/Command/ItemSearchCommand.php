@@ -7,5 +7,4 @@ use Guzzle\Service\Command\OperationCommand;
 
 class ItemSearchCommand extends OperationCommand
 {
-
 }

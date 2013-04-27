@@ -1,8 +1,5 @@
 <?php
 
-use Guzzle\Service\Builder\ServiceBuilder;
-use Guzzle\Tests\GuzzleTestCase;
-
 error_reporting(-1);
 
 // Ensure that composer has installed all dependencies
@@ -14,6 +11,9 @@ if (!file_exists(dirname(__DIR__) . '/composer.lock')) {
 // Include the composer autoloader
 $loader = require dirname(__DIR__) . '/vendor/autoload.php';
 $loader->add('UAM\\Amazon\\PA\\Tests', __DIR__);
+
+use Guzzle\Service\Builder\ServiceBuilder;
+use Guzzle\Tests\GuzzleTestCase;
 
 // Register services with the GuzzleTestCase
 GuzzleTestCase::setMockBasePath(__DIR__ . '/mock');
@@ -42,25 +42,4 @@ if (!isset($_SERVER['PREFIX']) || $_SERVER['PREFIX'] == 'hostname') {
     $_SERVER['PREFIX'] = crc32(gethostname());
 }
 
-// Instantiate the service builder
-$builder = UAM\Amazom\PA\AmazonPAServiceBuilder::factory($_SERVER['CONFIG']);
-
-/*
-// Turn on wire logging if configured
-$aws->getEventDispatcher()->addListener('service_builder.create_client', function (\Guzzle\Common\Event $event) {
-    if (isset($_SERVER['WIRE_LOGGING']) && $_SERVER['WIRE_LOGGING']) {
-        $event['client']->addSubscriber(Guzzle\Plugin\Log\LogPlugin::getDebugPlugin());
-    }
-});
-*/
-
-// Configure the tests to use the instantiated AWS service builder
-GuzzleTestCase::setServiceBuilder(ServiceBuilder::factory(array(
-    'test.amazonpa' => array(
-        'class' => 'AmazonPAClient',
-        'params' => array(
-            'AssociateTag' => 'porot0c-21',
-            'AWSAccesskeyId' => 'AKIAJZR3O4K7HZ53364A'
-        )
-    )
-)));
+GuzzleTestCase::setServiceBuilder(ServiceBuilder::factory($_SERVER['CONFIG']));
