@@ -1,0 +1,14 @@
+{
+    "name": "Amazon Product Advertising API",
+    "apiVersion": "2011-08-11",
+    "operations": {
+        "itemSearch": {
+            "httpMethod": "GET",
+            "parameters": {
+                "Service": "AWSECommerceService" 
+            },
+            "type" : "primitive",
+            "class": "UAM\\Amazon\\PA\\Command\\ItemSearchCommand"
+        }
+    }
+}
