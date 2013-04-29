@@ -15,11 +15,9 @@ class EcsClient extends AbstractClient
     const ASSOCIATE_TAG = 'associateTag';
 
     /**
-     * Factory method to create a new Amazon PA Client
+     * Factory method to create a new Amazon Ecs Client
      *
      * The following array keys and values are available options:
-     * - base_url: Base url of your Dzangocart store's API service
-     * - token: The secret token used to authenticate access to your Dzangocart store's API service
      *
      * @param array|Collection $config Configuration data
      */
