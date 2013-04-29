@@ -14,6 +14,7 @@ class EcsCommand extends OperationCommand
     {
         parent::build();
         $this->request->getQuery()->set('Service', 'AWSECommerceService');
+        $this->request->getQuery()->set('AWSAccessKeyId', $this->getClient()->getConfig('key'));
         $this->request->getQuery()->set('AssociateTag', $this->getClient()->getConfig('associateTag'));
     }
 }

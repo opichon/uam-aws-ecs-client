@@ -55,6 +55,28 @@ return array (
         )
     ),
     'operations' => array(
-        'ItemSearch' => array()
+        'ItemSearch' => array(
+            'class' => 'UAM\Aws\Ecs\Command\ItemSearchCommand',
+            'httpMethod' => 'GET',
+            'uri' => '/',
+            'parameters' => array(
+                'SearchIndex' => array(
+                    'location' => 'query',
+                    'required' => true,
+                    'type' => 'string'
+                ),
+                'Keywords' => array(
+                    'location' => 'query',
+                    'required' => true,
+                    'type' => 'string'
+
+                ),
+                'ResponseGroup' => array(
+                    'location' => 'query',
+                    'required' => true,
+                    'type' => 'string'
+                )
+            )
+        )
     )
 );
