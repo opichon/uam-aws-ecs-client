@@ -1,6 +1,6 @@
 <?php
 
-namespace UAM\Amazon\Pa\Command;
+namespace UAM\Aws\Ecs\Command;
 
 use Guzzle\Service\ClientInterface;
 use Guzzle\Service\Command\OperationCommand;
