@@ -78,16 +78,5 @@ return array (
                 )
             )
         )
-    ),
-    'models' => array(
-        'ItemSearchOutput' => array(
-            'type' => 'object',
-            'additionalProperties' => true,
-            'properties' => array(
-                'Items' => array(
-                    'location' => 'xml'
-                )
-            )
-        )
     )
 );
