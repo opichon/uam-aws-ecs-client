@@ -1,0 +1,6 @@
+{
+    "key": "Your AWS Access Key Id",
+    "secret": "Your AWS secret key",
+    "associateTag": "Your associate Tag",
+    "region": "region"
+}
