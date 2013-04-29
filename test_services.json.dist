@@ -1,13 +1,6 @@
 {
-    "services": {
-        "aws_ecs": {
-            "class": "UAM\\Aws\\Ecs\\EcsClient",
-            "params": {
-                "key": "Your AWS Access Key Id",
-                "secret": "Your AWS secret key",
-                "associateTag": "Your associate Tag",
-                "region": "region"
-            }
-        }
-    }
+    "key": "Your AWS Access Key Id",
+    "secret": "Your AWS secret key",
+    "associateTag": "Your associate Tag",
+    "region": "region"
 }

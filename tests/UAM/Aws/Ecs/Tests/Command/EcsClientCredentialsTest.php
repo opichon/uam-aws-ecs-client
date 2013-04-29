@@ -11,7 +11,7 @@ class EcsClientCredentialsTest extends AbstractEcsTestCase
         $credentials = $this->client->getCredentials();
 
         $this->assertEquals(
-            $this->getServiceBuilder()->getData('aws_ecs')['params']['key'],
+            $this->getServiceConfig()['key'],
             $credentials->getAccessKeyId()
         );
     }
@@ -21,7 +21,7 @@ class EcsClientCredentialsTest extends AbstractEcsTestCase
         $credentials = $this->client->getCredentials();
 
         $this->assertEquals(
-            $this->getServiceBuilder()->getData('aws_ecs')['params']['secret'],
+            $this->getServiceConfig()['secret'],
             $credentials->getSecretKey()
         );
     }

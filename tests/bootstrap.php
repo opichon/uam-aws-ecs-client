@@ -12,8 +12,8 @@ if (!file_exists(dirname(__DIR__) . '/composer.lock')) {
 $loader = require dirname(__DIR__) . '/vendor/autoload.php';
 $loader->add('UAM\\Amazon\\PA\\Tests', __DIR__);
 
-use Guzzle\Service\Builder\ServiceBuilder;
 use Guzzle\Tests\GuzzleTestCase;
+use UAM\Aws\Ecs\Aws;
 
 // Register services with the GuzzleTestCase
 GuzzleTestCase::setMockBasePath(__DIR__ . '/mock');
@@ -42,4 +42,4 @@ if (!isset($_SERVER['PREFIX']) || $_SERVER['PREFIX'] == 'hostname') {
     $_SERVER['PREFIX'] = crc32(gethostname());
 }
 
-GuzzleTestCase::setServiceBuilder(ServiceBuilder::factory($_SERVER['CONFIG']));
+GuzzleTestCase::setServiceBuilder(Aws::factory($_SERVER['CONFIG']));

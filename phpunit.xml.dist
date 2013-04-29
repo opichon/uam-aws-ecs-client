@@ -10,8 +10,8 @@
          testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
 
     <testsuites>
-        <testsuite name="UAMAmazonPA">
-            <directory>tests/UAM/Amazon/PA/Tests</directory>
+        <testsuite name="UAMAwsEcs">
+            <directory>tests/UAM/Aws/Ecs/Tests</directory>
         </testsuite>
     </testsuites>
 

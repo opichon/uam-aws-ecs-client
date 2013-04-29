@@ -21,4 +21,5 @@ class EcsClientTest extends AbstractEcsTestCase
     {
         $this->assertEquals('Aws\Common\Signature\SignatureV2', get_class($this->client->getSignature()));        
     }
+
 }

@@ -6,6 +6,8 @@ use Guzzle\Service\Builder\ServiceBuilderLoader;
 
 class Aws extends ServiceBuilderLoader
 {
+    const DEFAULT_NAME = 'ecs';
+
     public static function factory($config)
     {
         $loader = new static();
@@ -36,7 +38,7 @@ class Aws extends ServiceBuilderLoader
             }
         }
         else {
-            $name = array_key_exists('name', $config) ? $config['name'] : 'ecs';
+            $name = array_key_exists('name', $config) ? $config['name'] : static::DEFAULT_NAME;
 
             $services = array(
                 $name => array(
